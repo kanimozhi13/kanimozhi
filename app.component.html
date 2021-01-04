@@ -1,0 +1,39 @@
+<div class="row mt-5">
+  <div class="col-md-4 mb-3" *ngFor="let cars of carDetails">
+    <div class="card-text-center">
+      <div class="card-body">
+        <h5 class="car-title">{{cars.manufacturer}}</h5>
+       <p class="card-title">{{cars.model}}</p>
+      <a href="#" class="btn btn-primary">Buy Car</a>
+      </div>
+      <div class="car-footer text-muted ">
+        {{cars.price}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="row">
+    <div class ="col-md-6 mx-auto">
+        <div class = "card rounded-0">
+            <div class="card-header">
+                <h3 class="mb-0">LogIn</h3>
+            </div>
+               <div class="card-body">
+                  <form class="form">
+                   <div class="form-group">
+                   <label for="">Email</label>
+                     <input [(ngModel)] =userData.email type="text" name="email" class="form-control rounded-0" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Password</label>
+                      <input [(ngModel)]=userData.password type="password" name="password" class="form-control rounded-0" required>
+                  </div>
+                   <button (click)=loginUser() class="btn btn-primary float-right">login</button>
+                   </form>
+             </div>    
+            </div>
+        </div>
+</div> -->
+
