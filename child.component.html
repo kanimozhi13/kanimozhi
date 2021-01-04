@@ -1,0 +1,28 @@
+
+<table>
+    <tr>
+        <th>UserID</th>
+        <th>jobName</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>prefName</th>
+        <th>empCode</th>
+        <th>region</th>
+        <th>phoneNo</th>
+        <th>email</th>
+      </tr>
+      <tr *ngFor="let emp of parentComp">
+          <td>{{emp.userId}}</td>
+          <td>{{emp.jobTitleName|uppercase}}</td>
+          <td>{{emp.firstName}}</td>
+          <td>{{emp.lastName}}</td>
+          <td>{{emp.dob|date|uppercase}}</td>
+          <td>{{emp.preferredName}}</td>
+          <td>{{emp.employeeCode}}</td>
+          <td>{{emp.salary|currency:'INR'}}</td>
+          <td>{{emp.region}}</td>
+          <td>{{emp.phoneNumber}}</td>
+          <td>{{emp.emailAddress}}</td>
+      </tr>
+    </table> 
+<button (click)="receivedEvent()">GetIT</button>
