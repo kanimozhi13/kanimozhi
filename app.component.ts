@@ -7,29 +7,18 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  // this code for login
-//   userData = {}
- 
-//   constructor(){}
+  public employee:object;
+  public names ="hi kaniozhi";
+  public message = " ";
   
-
-// ngOnInit(){}
-
-// loginUser(){
-//   console.log('userData..',this.userData)
-// }
-carDetails : any;
-constructor(private http :HttpClient){
-this.carDetails = []
-
+  constructor( private http:HttpClient){
+    this.employee=[]
 }
-  ngOnInit(): void{
-    this.http.get<object>('../assets/data.json').subscribe( data=>{
-      this.carDetails = data;
-      
 
-    })
+  ngOnInit(){
 
-
+    this.http.get<object>('../assets/employee.json').subscribe( data=>{
+      this.employee = data;})
   }
+ 
 }
