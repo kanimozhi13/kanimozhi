@@ -1,0 +1,33 @@
+<input type="text" [(ngModel)]="searchMe"/>
+
+<table class="table" id="nos">
+    <tr>
+        <th>UserID</th>
+        <th>jobName</th>
+        <th>firstName</th>
+        <th>lastName</th>
+        <th>Gender</th>
+        <th>DOJ</th>
+        <th>FullName</th>
+        <th>empCode</th>
+        <th>salary</th>
+        <th>region</th>
+        <th>phoneNo</th>
+        <th>email</th>
+      </tr>
+      <tr *ngFor="let emp of parentComp|filterPipe :searchMe">
+          <td>{{emp.userId}}</td>
+          <td>{{emp.jobTitleName|uppercase}}</td>
+          <td>{{emp.firstName }}</td>
+          <td>{{emp.lastName}}</td>
+          <td>{{emp.gender}}</td>
+          <td>{{emp.dob|date|uppercase}}</td>
+          <td>{{emp.preferredFullName  | employeeTitlePipe : emp.gender }}</td>
+          <td>{{emp.employeeCode}}</td>
+          <td>{{emp.salary|currency:'INR'}}</td>
+          <td>{{emp.region}}</td>
+          <td>{{emp.phoneNumber}}</td>
+          <td>{{emp.emailAddress}}</td>
+      </tr>
+    </table> 
+    

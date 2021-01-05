@@ -1,7 +1,11 @@
-<div style="text-align: center;">
-<h4><b>parent Component...</b></h4>
-<h6>passig data parentComp to child</h6>
-</div>
-<app-child (childEvent)= "message=$event"
-[parentComp]="employee"></app-child>
-<app-life-cycle-hook></app-life-cycle-hook>
+<div id="mo"  style="text-align: center;">
+    <h6>Employee List</h6>
+    </div>
+    <button type="button" (click)="hideList()">Clear</button>
+    <!-- <div style="text-align: center;">
+        <input type="text" [(ngModel)]="fname"(input) ="searchMe()"/>{{fname}}
+    </div> -->
+    
+    <app-employee  [parentComp]="employee" *ngIf ="isShow" ></app-employee>
+
+    
